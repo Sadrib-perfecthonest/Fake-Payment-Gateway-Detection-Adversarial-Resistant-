@@ -53,7 +53,5 @@ The project integrates **real phishing datasets**, **legitimate URLs**, **advanc
 - Export trained models (`.pkl`)  
 - Ready for production API or dashboard  
 
----
 
-## 📁 Folder Structure
 
