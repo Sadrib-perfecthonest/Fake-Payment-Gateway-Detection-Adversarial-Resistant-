@@ -1,11 +1,19 @@
 import pandas as pd
+import random
 
+input_path = "../raw/bank_transactions_data_kaggle.csv"
+output_path = "../processed/kaggle_legit.csv"
 
-input_path = "../data/raw/kaggle_original.csv"
+bd_cities = ["Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna"]
 
-print("Loading Kaggle legitimate URLs...")
+print("Loading Kaggle dataset...")
 df = pd.read_csv(input_path)
 
-df.to_csv("../data/raw/kaggle_legit.csv", index=False)
+df_small = df.head(14)  
 
-print("Saved to data/raw/kaggle_legit.csv")
+df_small["Location"] = [random.choice(bd_cities) for _ in range(len(df_small))]
+df_small["label"] = 0  
+
+df_small.to_csv(output_path, index=False)
+
+print("Saved Kaggle legitimate dataset to data/raw/kaggle_legit.csv")
