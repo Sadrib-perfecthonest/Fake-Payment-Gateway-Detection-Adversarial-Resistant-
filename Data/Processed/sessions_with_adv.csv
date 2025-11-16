@@ -1,0 +1,13 @@
+url,label,domain_age_days,notes,num_redirects,https_flag,amount
+http://paypal.com,1,365.0,age_spoof,,,
+http://paypal.com,1,,more_redirects,4.0,,
+http://p@yp@I.c0m,1,,homoglyph,,,
+http://paypal.com,1,30.0,age_spoof,,,
+http://facebook.com,1,30.0,age_spoof,,,
+https://facebook.com,1,,https_added,,1.0,
+http://f@ceb00k.c0m,1,,homoglyph,,,
+http://facebook.com,1,,amount_mimic,,,5.0
+https://bankofamerica.com,1,,https_added,,1.0,
+http://b@nk0f@meric@.c0m,1,,homoglyph,,,
+http://bankofamerica.com,1,60.0,age_spoof,,,
+http://bankofamerica.com,1,30.0,age_spoof,,,

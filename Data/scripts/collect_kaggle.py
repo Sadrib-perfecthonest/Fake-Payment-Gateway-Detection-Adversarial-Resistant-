@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Replace this path with your Kaggle downloaded file
+
 input_path = "../data/raw/kaggle_original.csv"
 
 print("Loading Kaggle legitimate URLs...")

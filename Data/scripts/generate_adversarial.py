@@ -1,4 +1,3 @@
-
 import pandas as pd
 import random
 from urllib.parse import urlparse
@@ -6,7 +5,7 @@ from urllib.parse import urlparse
 def homoglyph_domain(url):
     p = urlparse(url)
     host = p.netloc
-    host2 = host.replace('l','I').replace('o','0').replace('a','@')  
+    host2 = host.replace('l','I').replace('o','0').replace('a','@')
     return url.replace(host, host2)
 
 def add_https(url):
@@ -18,7 +17,6 @@ def add_https(url):
         return 'https://' + url
 
 def mimic_timing(row):
-    
     return random.uniform(1.0, 12.0)
 
 def age_spoof(row):
@@ -55,9 +53,9 @@ def generate_variants(df, n_variants=3):
     return pd.DataFrame(adv_rows)
 
 if __name__ == "__main__":
-    base = pd.read_csv('data/Processed/sessions_clean.csv')
+    base = pd.read_csv('../Processed/sessions_clean.csv')
    
     phishing_rows = base[base['label']==1]
     adv = generate_variants(phishing_rows, n_variants=4)
-    adv.to_csv('data/Processed/sessions_with_adv.csv', index=False)
+    adv.to_csv('../Processed/sessions_with_adv.csv', index=False)
     print('Saved adversarial samples:', len(adv))
