@@ -1,0 +1,10 @@
+url,TransactionAmount,TransactionType,CustomerAge,AccountBalance,Location,Email,label
+,,,,,,smtp123@gmail.com,1
+http://paypal.com,4.99,Debit,35,1200.0,Sylhet,,1
+http://p@yp@I.c0m,4.99,Debit,35,1200.0,Sylhet,,1
+http://apple pay.com,1.99,Debit,22,500.0,Chittagong,,1
+http://@ppIe p@y.c0m,1.99,Debit,22,500.0,Chittagong,,1
+https://bankofamerica.com,1.99,Debit,60,300.0,Khulna,,1
+https://b@nk0f@meric@.c0m,9.99,Debit,60,300.0,Khulna,,1
+http://skrill.com,0.49,Debit,19,150.0,Chittagong,,1
+https://skrill.com,0.49,Debit,19,150.0,Chittagong,,1

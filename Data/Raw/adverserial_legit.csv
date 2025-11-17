@@ -1,10 +1,10 @@
 url,label,TransactionAmount,TransactionType,CustomerAge,AccountBalance,Location
 http://paypal.com,1,4.99,Debit,35,1200.00,Sylhet
-http://google.com,0,50.00,Credit,45,5000.00,Dhaka
-http://facebook.com,1,1.99,Debit,22,500.00,Chittagong
-http://microsoft.com,0,120.50,Debit,55,15000.00,Rajshahi
+http://google pay.com,0,50.00,Credit,45,5000.00,Dhaka
+http://apple pay.com,1,1.99,Debit,22,500.00,Chittagong
+http://stripe.com,0,120.50,Debit,55,15000.00,Rajshahi
 https://bankofamerica.com,1,9.99,Debit,60,300.00,Khulna
-http://linkedin.com,0,3.00,Credit,30,7000.00,Dhaka
-http://chase.com,1,0.49,Debit,19,150.00,Chittagong
-http://amazon.com,0,75.00,Credit,40,9000.00,Sylhet
+http://Alipay.com,0,3.00,Credit,30,7000.00,Dhaka
+http://skrill.com,1,0.49,Debit,19,150.00,Chittagong
+http://wepay.com,0,75.00,Credit,40,9000.00,Sylhet
 
