@@ -9,29 +9,25 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.preprocessing import StandardScaler
 import xgboost as xgb
 import warnings
 warnings.filterwarnings('ignore')
 
-def load_and_prepare_data():
-    """Load and prepare the feature data for model training"""
-    # Load the combined dataset with absolute path
-    df = pd.read_csv('d:/python project(cse466)/Fake-Payment-Gateway-Detection-Adversarial-Resistant-/Data/Processed/combined_dataset.csv')
+def load_and_prepare_data_extended():
+    """Load and prepare the feature data for extended model training"""
+    # Load the combined dataset
+    df = pd.read_csv('../../Processed/combined_dataset.csv')
     
-    # Prepare features from the existing data
+    # Enhanced feature engineering
     df['url_length'] = df['url'].apply(len)
     df['num_dots'] = df['url'].apply(lambda x: x.count('.'))
     df['has_https'] = df['url'].apply(lambda x: 1 if x.startswith('https') else 0)
     df['num_digits'] = df['url'].apply(lambda x: sum(c.isdigit() for c in x))
-    
-    # Show feature distributions
-    print("\nFeature distributions by class:")
-    print("HTTPS feature:")
-    print(df.groupby(['label', 'has_https']).size().unstack(fill_value=0))
-    print("\nURL length:")
-    print(df.groupby('label')['url_length'].mean())
+    df['num_special_chars'] = df['url'].apply(lambda x: sum(not c.isalnum() for c in x))
+    df['has_ip'] = df['url'].apply(lambda x: 1 if any(part.isdigit() for part in x.split('.')) else 0)
+    df['url_entropy'] = df['url'].apply(lambda x: len(set(x)) / len(x) if len(x) > 0 else 0)
     
     # Encode categorical variables
     le = LabelEncoder()
@@ -39,7 +35,8 @@ def load_and_prepare_data():
     
     # Select features for modeling
     feature_columns = ['TransactionAmount', 'CustomerAge', 'AccountBalance', 
-                      'url_length', 'num_dots', 'has_https', 'num_digits', 'Location_encoded']
+                      'url_length', 'num_dots', 'has_https', 'num_digits', 
+                      'num_special_chars', 'has_ip', 'url_entropy', 'Location_encoded']
     
     X = df[feature_columns]
     y = df['label']
@@ -49,26 +46,23 @@ def load_and_prepare_data():
     
     return X, y, df
 
-def train_and_evaluate_extended_models(X, y):
-    """Train extended set of models and evaluate their performance"""
+def train_and_evaluate_models_extended(X, y):
+    """Train multiple models and evaluate their performance"""
     # Split the data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
     
-    # Scale the features
+    # Scale the features (needed for some models)
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
     
-    # Define extended set of models to evaluate
+    # Define models to evaluate
     models = {
-        # Original models
         'Logistic Regression': (LogisticRegression(random_state=42, max_iter=1000), False),
-        'Random Forest': (RandomForestClassifier(n_estimators=100, random_state=42), False),
+        'Random Forest': (RandomForestClassifier(n_estimators=100, random_state=42, max_depth=10), False),
+        'Decision Tree': (DecisionTreeClassifier(random_state=42, max_depth=10), False),
         'SVM': (SVC(random_state=42, probability=True), True),
         'XGBoost': (xgb.XGBClassifier(random_state=42), False),
-        
-        # Additional models
-        'Decision Tree': (DecisionTreeClassifier(random_state=42), False),
         'AdaBoost': (AdaBoostClassifier(random_state=42), False),
         'Gradient Boosting': (GradientBoostingClassifier(random_state=42), False),
         'Naive Bayes': (GaussianNB(), False),
@@ -120,19 +114,19 @@ def train_and_evaluate_extended_models(X, y):
     return results
 
 def main():
-    """Main function to run the extended evaluation"""
-    print("Fake Payment Gateway Detection - Extended Model Evaluation")
-    print("=" * 60)
+    """Main function to run the extended model comparison"""
+    print("Fake Payment Gateway Detection - Extended Model Comparison")
+    print("=" * 55)
     
     try:
         # Load and prepare data
-        X, y, df = load_and_prepare_data()
+        X, y, df = load_and_prepare_data_extended()
         print(f"Dataset shape: {df.shape}")
         print("Label distribution:")
         print(df['label'].value_counts())
         
-        # Train and evaluate extended models
-        results = train_and_evaluate_extended_models(X, y)
+        # Train and evaluate models
+        results = train_and_evaluate_models_extended(X, y)
         
         # Find best models based on F1 score
         print("\n" + "="*70)
@@ -156,6 +150,10 @@ def main():
             f1 = metrics['f1_score']
             print(f"{name:25s}: {f1:.4f}")
             
+        # Highlight Random Forest performance
+        rf_f1 = results['Random Forest']['f1_score']
+        print(f"\nRandom Forest F1-Score: {rf_f1:.4f}")
+        
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         import traceback

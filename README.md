@@ -10,9 +10,11 @@ The project integrates **real phishing datasets**, **legitimate URLs**, **advanc
 - 🔍 Detects fake payment gateways with ML  
 - 🛡️ Adversarial‑resistant feature engineering  
 - 📊 Clean, structured datasets (PhishTank + Kaggle)  
-- 🤖 Models trained: SVM, XGBoost (extendable)  
+- 🤖 Models trained: SVM, XGBoost, Random Forest (comprehensive implementation)  
 - 📈 High accuracy + evaluation metrics  
 - 💾 Saved final models for deployment  
+- 🔄 Hyperparameter tuning capabilities  
+- 🎯 Prediction API for single and batch samples  
 
 ---
 
@@ -42,6 +44,7 @@ The project integrates **real phishing datasets**, **legitimate URLs**, **advanc
 
 ### **5️⃣ Model Training**  
 - Based on Evaluation 
+- Random Forest with hyperparameter tuning
 
 ### **6️⃣ Evaluation**
 - Accuracy  
@@ -52,6 +55,19 @@ The project integrates **real phishing datasets**, **legitimate URLs**, **advanc
 ### **7️⃣ Model Saving**
 - Export trained models (`.pkl`)  
 - Ready for production API or dashboard  
+
+---
+## 🌲 Random Forest Implementation
+
+The project includes a simple Random Forest implementation with the following features:
+
+- **Basic Training**: Training with optimized parameters
+- **Enhanced Feature Set**: URL-based features including length, entropy, digit count, special character count
+- **Model Persistence**: Save trained models for future use
+- **Evaluation Metrics**: Performance evaluation including accuracy, precision, recall, F1-score, and confusion matrix
+- **Feature Importance**: Analysis of which features contribute most to predictions
+
+The implementation is located in `Data/Notebook/Models/random_forest_simple.py` and provides a streamlined interface for Random Forest functionality.
 
 
 
