@@ -1,0 +1,16 @@
+TransactionAmount,CustomerAge,AccountBalance,url,TransactionType,Location,source,label,timestamp,url_analysis,fraud_probability
+4500.75,32,25000.5,https://securebank.com,In-Store,Dhaka,legit,0,2025-12-06T11:10:18.029774,legit,0.12724832
+4500.0,30,25000.5,https://paypalsk.com,ATM,Chittagong,suspicious,0,2025-12-06T11:10:47.061437,unknown,0.1212052032351493
+4500.0,30,25000.5,https://paypal.com,ATM,Chittagong,legit,0,2025-12-06T11:11:02.780652,legit,0.0970489829778671
+4000.0,25,500000.0,https://google11.com,In-Store,Dhaka,suspicious,0,2025-12-06T11:11:59.340446,unknown,0.0002983554149977
+4000.0,25,500000.0,https://google11.com,In-Store,Chittagong,suspicious,0,2025-12-06T11:12:17.706013,unknown,0.0003050887607969
+4000.0,25,500000.0,https://google11.com,Purchase,Chittagong,suspicious,0,2025-12-06T11:12:37.687150,unknown,0.0003050887607969
+21.0,25,5011111.0,http//:google.com,ATM,Sylhet,suspicious,0,2025-12-06T11:13:30.285265,unknown,1.7605424442671494e-32
+4.99,35,1200.0,http://paypal.com,ATM,Sylhet,legit,0,2025-12-06T11:15:56.306064,legit,0.2670788168907165
+4.99,35,1200.0,https://paypal.com,ATM,Sylhet,legit,0,2025-12-06T11:16:27.395205,legit,0.2195477932691574
+500.0,35,1200.0,https://paypal.com,ATM,Dhaka,legit,0,2025-12-06T11:16:47.287442,legit,0.2565896213054657
+500.0,35,1200.0,https://paypal.com,Mobile,Dhaka,legit,0,2025-12-06T11:17:13.143014,legit,0.2565896213054657
+500.0,35,1200.0,https://paypal.com,Mobile,Rajshahi,legit,0,2025-12-06T11:17:18.570692,legit,0.3144926130771637
+6000.0,35,1200000.0,https://paypal.com,Mobile,Rajshahi,legit,0,2025-12-06T11:17:32.921875,legit,8.255491401598647e-09
+6000.0,35,1200000.0,http://paypal.com,Mobile,Rajshahi,legit,0,2025-12-06T11:17:41.307822,legit,6.841485156172666e-09
+600.0,35,1200.0,http://paypal.com,Mobile,Rajshahi,legit,0,2025-12-06T11:17:49.962697,legit,0.3491228520870209
