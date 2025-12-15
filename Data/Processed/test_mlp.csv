@@ -65,6 +65,7 @@ https://payoneer.com/active-loop-surface,0.879221771,Debit,0.666666667,0.8151190
 NON_URL_TRANSACTION_PLACEHOLDER,0.001221329,MISSING,0.298245614,0.008301803,MISSING,0.0,pid:++73ssSF8211SAD=:20131,MISSING,1,111.94.88.67,0.511864407,9981004231,phishing,31,31,0,3.735666068,0
 https://hsbc.com/nice-center-rock,0.691551223,Credit,0.947368421,0.421119201,Rajshahi,0.3,D715101,MISSING,0,63.155.214.203,0.627966102,MISSING,legit,31,15,1,2.795551903,0
 https://bkas.com/hard-angle-colony,0.571771211,Credit,0.175438596,0.493991144,Sylhet,1.0,D418217,MISSING,0,78.142.31.101,0.431355932,MISSING,legit,34,19,1,3.014293711,0
+<<<<<<< HEAD
 url,TransactionAmount,TransactionType,CustomerAge,AccountBalance,Location,BadTryCount,Device Id,notes,label,IP Address,TransactionDuration,Mobile,source,url_length,path_length,ssl_flag,domain_entropy,DomainAge
 https://example0.com/pay-confirm,0.37454,Debit,0.183435,0.779691,Khulna,0.2,D621430,MISSING,0,203.88.117.100,0.142867,MISSING,phishing,43,16,1,2.924678,0
 https://example1.com/pay-confirm,0.181825,Debit,0.617482,0.611653,Khulna,0.4,D600186,MISSING,0,170.220.188.208,0.232771,8667272366,adversarial,22,9,0,3.860615,0
@@ -86,3 +87,5 @@ https://example16.com/pay-confirm,0.844213,MISSING,0.570061,0.097176,Barisal,0.4
 https://example17.com/pay-confirm,0.256207,Debit,0.081594,0.005185,Rajshahi,0.8,D364512,MISSING,1,238.144.142.204,0.886617,5698616641,adversarial,41,23,0,2.810083,0
 https://example18.com/pay-confirm,0.981841,Credit,0.590833,0.0305,Rajshahi,0.0,D284078,MISSING,1,235.188.101.225,0.827869,9956499139,legit,51,24,1,3.58127,0
 https://example19.com/pay-confirm,0.63743,Debit,0.969537,0.714595,Sylhet,0.8,D444894,MISSING,0,92.58.183.90,0.025351,MISSING,adversarial,28,16,0,2.616387,0
+=======
+>>>>>>> dd8a19a7b13f75157a6e7bfd84703ef59f25d9df
