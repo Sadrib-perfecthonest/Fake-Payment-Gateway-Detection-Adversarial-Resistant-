@@ -1,0 +1,21 @@
+url,TransactionAmount,TransactionType,CustomerAge,AccountBalance,Location,BadTryCount,Device Id,notes,label,IP Address,TransactionDuration,Mobile,source,url_length,path_length,ssl_flag,domain_entropy,DomainAge
+https://example0.com/pay-confirm,0.37454,Debit,0.183435,0.779691,Khulna,0.2,D621430,MISSING,0,203.88.117.100,0.142867,MISSING,phishing,43,16,1,2.924678,0
+https://example1.com/pay-confirm,0.181825,Debit,0.617482,0.611653,Khulna,0.4,D600186,MISSING,0,170.220.188.208,0.232771,8667272366,adversarial,22,9,0,3.860615,0
+https://example2.com/pay-confirm,0.450499,Credit,0.948886,0.965632,Chittagong,0.4,D517113,MISSING,0,130.84.92.111,0.683264,2111451555,phishing,25,26,1,3.635401,0
+https://example3.com/pay-confirm,0.031313,Credit,0.775133,0.939499,Barisal,0.9,D635822,MISSING,1,206.215.252.249,0.961172,MISSING,phishing,43,29,1,3.714068,0
+https://example4.com/pay-confirm,0.275999,Debit,0.802197,0.074551,Dhaka,0.8,D233767,MISSING,1,63.139.243.81,0.711342,9907953924,adversarial,47,11,0,3.746596,0
+https://example5.com/pay-confirm,0.330898,MISSING,0.310982,0.325183,Sylhet,0.6,D373109,MISSING,0,35.193.227.101,0.971712,MISSING,adversarial,33,11,0,3.545466,0
+https://example6.com/pay-confirm,0.427541,Credit,0.439337,0.201719,Dhaka,0.3,D210687,MISSING,1,222.229.151.231,0.410383,9076547867,phishing,25,16,1,3.33302,0
+https://example7.com/pay-confirm,0.88328,Credit,0.122088,0.356298,Barisal,0.1,D752664,MISSING,0,190.121.116.205,0.860731,MISSING,legit,43,19,0,3.146406,0
+https://example8.com/pay-confirm,0.518791,Debit,0.403836,0.064892,Chittagong,1.0,D414877,MISSING,0,130.131.113.101,0.28484,MISSING,phishing,21,26,0,3.057293,0
+https://example9.com/pay-confirm,0.908266,MISSING,0.680705,0.530935,Chittagong,1.0,D580671,MISSING,0,68.183.203.184,0.237638,MISSING,adversarial,35,5,0,3.14156,0
+https://example10.com/pay-confirm,0.186519,Debit,0.858359,0.325959,Rajshahi,0.0,D659042,MISSING,0,147.148.96.199,0.174366,2707558823,adversarial,37,12,0,3.85138,0
+https://example11.com/pay-confirm,0.735216,Credit,0.924694,0.877339,Sylhet,0.2,D745263,MISSING,1,112.249.244.60,0.260829,1399873327,legit,56,27,0,3.057743,0
+https://example12.com/pay-confirm,0.700358,MISSING,0.856324,0.404508,Dhaka,0.6,D768234,MISSING,0,200.164.166.104,0.606429,MISSING,legit,48,22,1,3.110728,0
+https://example13.com/pay-confirm,0.485614,MISSING,0.651961,0.224269,Dhaka,0.0,D977844,MISSING,1,148.248.128.136,0.849223,MISSING,adversarial,41,27,1,2.987979,0
+https://example14.com/pay-confirm,0.973011,Debit,0.486742,0.906099,Sylhet,0.8,D940477,MISSING,0,28.111.192.225,0.195243,MISSING,adversarial,36,16,1,3.439889,0
+https://example15.com/pay-confirm,0.27956,Credit,0.370159,0.015457,Khulna,0.4,D538452,MISSING,0,99.188.225.116,0.294449,MISSING,legit,22,22,0,3.289383,0
+https://example16.com/pay-confirm,0.844213,MISSING,0.570061,0.097176,Barisal,0.4,D156958,MISSING,0,234.130.218.17,0.84867,4017146154,adversarial,48,14,0,3.339562,0
+https://example17.com/pay-confirm,0.256207,Debit,0.081594,0.005185,Rajshahi,0.8,D364512,MISSING,1,238.144.142.204,0.886617,5698616641,adversarial,41,23,0,2.810083,0
+https://example18.com/pay-confirm,0.981841,Credit,0.590833,0.0305,Rajshahi,0.0,D284078,MISSING,1,235.188.101.225,0.827869,9956499139,legit,51,24,1,3.58127,0
+https://example19.com/pay-confirm,0.63743,Debit,0.969537,0.714595,Sylhet,0.8,D444894,MISSING,0,92.58.183.90,0.025351,MISSING,adversarial,28,16,0,2.616387,0
