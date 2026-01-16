@@ -1,4 +1,4 @@
-# 🚨 Fake Payment Gateway Detection (Adversarial‑Resistant)
+# 🚨 Fake Payment Gateway Detection (Adversarial‑Resistant) Fraud Shield AI
 
 A machine‑learning based system to **detect fake / phishing payment gateways** by analyzing URL metadata, transaction‑style behavior, and adversarial‑robust features.  
 The project integrates **real phishing datasets**, **legitimate URLs**, **advanced preprocessing**, and **adversarial example generation** to build a strong, production‑grade classifier.
